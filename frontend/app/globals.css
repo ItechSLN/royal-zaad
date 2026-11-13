@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  /* Measured by the storefront header at runtime; this is the first-paint
+     fallback, matching the desktop header (37px bar + 103.5px nav + 1px rule). */
+  --header-height: 142px;
+  /* Surfaces — dark */
+  --noir: #0a0a0b;
+  --noir-2: #121214;
+  --charcoal: #1c1c1f;
+  --charcoal-2: #26262a;
+  --hairline: #332f26;
+
+  /* Metals */
+  --gold: #d4af37;
+  /* Darkened from #9c7a1e to meet WCAG AA (4.5:1) for small text on cream and white. */
+  --gold-deep: #816519;
+  --champagne: #e7cfa3;
+  --amber: #c8912f;
+
+  /* Surfaces — light */
+  --cream: #f8f4ec;
+  --cream-2: #efe8da;
+  --admin-bg: #f5f2eb;
+  --surface: #ffffff;
+
+  /* Ink */
+  --ink: #16140f;
+  --ink-muted: #6e675a;
+  --text-on-dark: #f3eee4;
+  --text-muted-dark: #9a9285;
+
+  /* Lines */
+  --border: #e3dccc;
+  --border-strong: #cfc5ae;
+
+  /* Status */
+  /* Darkened from #3f8f62 to meet WCAG AA (4.5:1) on cream and white. */
+  --success: #347550;
+  --success-bg: #e7f2ec;
+  --warning: #b9822a;
+  --warning-bg: #fbf1df;
+  --danger: #b4483c;
+  --danger-bg: #faeae8;
+  --info: #3d6e9b;
+  --info-bg: #e9f0f7;
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  /* Font stacks are declared here, never as CSS variables. */
+  .font-display {
+    font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  }
+
+  .font-body {
+    font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  }
+
+  .font-mono {
+    font-family: var(--font-plex-mono), "IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  .font-arabic {
+    font-family: var(--font-amiri), "Amiri", "Noto Naskh Arabic", serif;
+  }
+
+  body {
+    font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  }
+}

@@ -1,0 +1,22 @@
+# Dependencies & builds
+node_modules/
+dist/
+.next/
+out/
+build/
+coverage/
+*.tsbuildinfo
+
+# Secrets — only the documented templates are committed
+.env
+.env.*
+!.env.example
+
+# Local / tooling
+.DS_Store
+*.log
+.claude/settings.local.json
+.vscode
+backend/.qa-dist/
+shots/
+backend/test/e2e-ui/**/state.json
